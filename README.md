@@ -55,6 +55,24 @@ macOS·Linux는 `.venv/bin/pip`을 씁니다. `.env.example`을 `.env`로 복사
 .venv/Scripts/python graph.py
 ```
 
+## 공개 배포 (Streamlit Community Cloud)
+
+저장소를 연결하고 Main file을 `app.py`로 둡니다. 앱 설정의 Secrets에 아래를 넣습니다.
+
+```toml
+OPENAI_API_KEY = "..."
+TYPESAFE_API_KEY = "..."
+PUBLIC_DEMO = "1"
+AI_LIMIT_PER_IP = "5"
+```
+
+`PUBLIC_DEMO = "1"`이면 공개 데모 모드가 됩니다.
+
+- AI를 부르는 동작(추천 보내기, 다시 쓰기)은 IP당 `AI_LIMIT_PER_IP`회까지. 승인, 수정, 빼기는 제한 없음
+- 아무나 기록을 지우거나 AI를 30번 부르지 못하게 "기록 모두 지우기"와 "예시 추천 30건 넣기"를 끔
+- IP는 `X-Forwarded-For` 헤더로 봅니다. 헤더는 꾸밀 수 있어서 비용을 줄이는 장치이지 완벽한 차단은 아닙니다
+- Community Cloud의 파일은 앱이 다시 시작되면 지워집니다. 그때는 예시 30건으로 다시 시작합니다
+
 ## 기준 검증
 
 ```bash

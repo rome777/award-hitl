@@ -21,6 +21,9 @@ from judge import make_judge  # noqa: E402
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 MAX_PER_PERSON = 2
+# 공개 배포(Streamlit Cloud Secrets 에 PUBLIC_DEMO = "1")에서는 IP당 AI 호출을 제한하고, 지우기·예시 넣기를 끈다
+PUBLIC = os.getenv("PUBLIC_DEMO") == "1"
+AI_LIMIT = int(os.getenv("AI_LIMIT_PER_IP", "5"))
 
 st.set_page_config(page_title="송년회 시상 승인", layout="wide")
 st.markdown("""
@@ -102,6 +105,23 @@ def esc(x):
     return html.escape(str(x))
 
 
+def client_ip():
+    """프록시 뒤에서는 X-Forwarded-For 의 첫 주소가 사용자 IP다. 헤더는 꾸밀 수 있어 완벽한 제한은 아니다."""
+    try:
+        xff = st.context.headers.get("X-Forwarded-For", "")
+        ip = xff.split(",")[0].strip() if isinstance(xff, str) and xff else st.context.ip_address
+    except Exception:  # 테스트 환경 등 요청 정보가 없을 때
+        ip = None
+    return ip if isinstance(ip, str) and ip else "local"
+
+
+IP = client_ip()
+
+
+def ai_left():
+    return AI_LIMIT - store.usage(con, IP) if PUBLIC else None
+
+
 rows = all_rows()
 pending = [r for r in rows if r["status"] == "대기"]
 
@@ -113,18 +133,20 @@ with st.sidebar:
     st.caption(f"판정: {'Jev' if engine == 'jev' else engine + ' (대체 판정)'}")
     st.caption(f"승인: {graph.APPROVER} (데모를 쓰는 아무나)")
     st.caption(f"승인 대기: {len(pending)}건")
+    if PUBLIC:
+        st.caption(f"AI 사용 가능: {max(ai_left(), 0)}/{AI_LIMIT}회 (추천 보내기, 다시 쓰기. 공개 데모라 IP당 제한)")
     st.caption(f"멈춤 기준: 창피·불쾌 ≥ {DEFAULT['awkward']} · 사생활 ≥ {DEFAULT['private']} · "
                f"성격 '조롱' 또는 확신도 < {DEFAULT['tone_conf']}")
     st.divider()
     samples_in = store.has_samples(con, load_json("samples"))
     empty = not store.submissions(con)
-    if st.button("예시 추천 30건 넣기", width="stretch", disabled=samples_in,
-                 help="이미 들어가 있습니다" if samples_in else None):
+    if st.button("예시 추천 30건 넣기", width="stretch", disabled=samples_in or PUBLIC,
+                 help="공개 데모에서는 꺼 둡니다" if PUBLIC else ("이미 들어가 있습니다" if samples_in else None)):
         bar = st.progress(0.0, text="추천 처리 중")
         insert_samples(lambda d, n: bar.progress(d / n, text=f"추천 처리 중 {d}/{n}"))
         st.rerun()
-    if st.button("기록 모두 지우기", width="stretch", disabled=empty,
-                 help="지울 기록이 없습니다" if empty else None):
+    if st.button("기록 모두 지우기", width="stretch", disabled=empty or PUBLIC,
+                 help="공개 데모에서는 꺼 둡니다" if PUBLIC else ("지울 기록이 없습니다" if empty else None)):
         for s in store.submissions(con):
             saver.delete_thread(s["id"])
         store.reset(con)
@@ -164,7 +186,12 @@ with tab_rec:
     reason = st.text_area("추천 이유", key="reason")
     used = store.count_from(con, frm)
     st.caption(f"{frm}님 추천 {used}/{MAX_PER_PERSON}")
-    if st.button("추천 보내기", type="primary", disabled=used >= MAX_PER_PERSON or not reason.strip()):
+    no_ai = PUBLIC and ai_left() <= 0
+    if no_ai:
+        st.caption(f"이 IP의 AI 사용 횟수({AI_LIMIT}회)를 다 썼습니다.")
+    if st.button("추천 보내기", type="primary", disabled=used >= MAX_PER_PERSON or not reason.strip() or no_ai):
+        if PUBLIC:
+            store.add_usage(con, IP)
         with st.spinner("상 이름과 문구를 쓰고 검사하는 중"):
             sid = run_submission(frm, to, reason.strip())
         award = app.get_state(graph.config(sid)).values["award"]
@@ -226,7 +253,12 @@ with tab_queue:
                     st.rerun()
             with st.expander(f"다시 쓰기 (남은 횟수 {left_rewrites})"):
                 ins = st.text_input("AI에게 줄 지시", placeholder="예: 실수 얘기는 빼고 성실함을 칭찬하는 쪽으로", key=f"i_{sid}")
-                if st.button("이 지시로 다시 쓰기", disabled=left_rewrites <= 0 or not ins.strip(), key=f"rw_{sid}"):
+                no_ai = PUBLIC and ai_left() <= 0
+                if no_ai:
+                    st.caption(f"이 IP의 AI 사용 횟수({AI_LIMIT}회)를 다 썼습니다.")
+                if st.button("이 지시로 다시 쓰기", disabled=left_rewrites <= 0 or not ins.strip() or no_ai, key=f"rw_{sid}"):
+                    if PUBLIC:
+                        store.add_usage(con, IP)
                     with st.spinner("다시 쓰는 중"):
                         graph.answer(app, sid, {"action": "rewrite", "instruction": ins.strip()})
                     st.rerun()

@@ -37,6 +37,7 @@ def connect(path=DB_PATH):
     CREATE TABLE IF NOT EXISTS decisions (
         n INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT, action TEXT, detail TEXT, approver TEXT, at TEXT);
     CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);
+    CREATE TABLE IF NOT EXISTS usage (ip TEXT PRIMARY KEY, count INTEGER);
     """)
     return con
 
@@ -104,3 +105,15 @@ def has_samples(con, samples):
     """예시 추천이 전부 들어가 있는지 (추천한 사람, 받는 사람, 이유가 같은 추천이 있는지로 본다)."""
     have = {(r["from_name"], r["to_name"], r["reason"]) for r in submissions(con)}
     return all((x["from"], x["to"], x["reason"]) in have for x in samples)
+
+
+def usage(con, ip):
+    """공개 배포에서 IP별 AI 호출 횟수 (추천 보내기, 다시 쓰기)."""
+    row = con.execute("SELECT count FROM usage WHERE ip=?", (ip,)).fetchone()
+    return row[0] if row else 0
+
+
+def add_usage(con, ip):
+    with LOCK:
+        con.execute("INSERT INTO usage VALUES (?, 1) ON CONFLICT(ip) DO UPDATE SET count = count + 1", (ip,))
+        con.commit()
