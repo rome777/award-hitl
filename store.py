@@ -12,7 +12,7 @@ import uuid
 from datetime import datetime
 
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
-# AWARD_EXAMPLE=1 이면 가상 이름 예시로 돌고 기록도 따로 둔다 (REPORT 캡처용, 실명 데모와 섞이지 않게)
+# AWARD_EXAMPLE=1 이면 다른 이름 세트(*.example.json)로 돌고 기록도 따로 둔다 (REPORT 캡처용)
 EXAMPLE = os.getenv("AWARD_EXAMPLE") == "1"
 # AWARD_DB_DIR 을 주면 그 폴더에 기록을 둔다 (시험용 임시 폴더)
 DB_DIR = os.getenv("AWARD_DB_DIR") or (os.path.join(DATA, "example") if EXAMPLE else DATA)

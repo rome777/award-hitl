@@ -46,8 +46,7 @@ macOS·Linux는 `.venv/bin/pip`을 씁니다. `.env.example`을 `.env`로 복사
 - 사이드바 **기록 모두 지우기**: 기록이 없으면 비활성. 지워도 예시를 다시 자동으로 채우지는 않습니다.
 - 사이드바 **예시 추천 30건 넣기**: 예시가 이미 들어가 있으면 비활성. 지운 뒤에 다시 넣을 때 씁니다.
 
-참석자 명단은 `data/attendees.json`이 있으면 그걸, 없으면 가상 이름 `data/attendees.example.json`을 씁니다.
-실명 파일은 저장소에 올리지 않습니다. 실명 파일이 있어도 가상 이름으로 돌리려면 `streamlit run app.py -- --example`.
+참석자 명단은 `data/attendees.json`(가상 이름 21명)을 씁니다. 다른 이름 세트 `data/*.example.json`으로 돌리려면 `streamlit run app.py -- --example`.
 
 명령줄에서 흐름만 확인할 수도 있습니다 (칭찬형 1건 자동 공개, 놀림형 1건 멈춤 후 승인).
 
@@ -93,4 +92,6 @@ AI_LIMIT_PER_IP = "5"
 | `store.py` | 추천, 공개된 상, 담당자 결정 기록 (SQLite) |
 | `app.py` | Streamlit 데모 |
 | `evaluate.py` | 기준 비교표 |
-| `data/*.example.json` | 가상 이름 참석자 21명, 예시 추천 30건, 무작위 추천 이유 40개 |
+| `data/attendees.json` · `data/samples.json` | 참석자 21명(가상 이름), 예시 추천 30건 |
+| `data/*.example.json` | 같은 구조의 다른 이름 세트 (보고서 캡처용) |
+| `data/reasons.json` | 추천하기 화면의 무작위 추천 이유 40개 |

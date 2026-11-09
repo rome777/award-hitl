@@ -1,10 +1,6 @@
 .venv/
 __pycache__/
 .env
-# 실명 데이터: 저장소에 올리지 않음 (가상 이름 *.example.json 만 올림)
-data/attendees.json
-data/samples.json
 data/*.sqlite
 data/*.sqlite-*
 data/example/
-results/real/

@@ -5,9 +5,9 @@
 
   python evaluate.py            # 캐시가 없으면 만들고 표 생성
   python evaluate.py --refresh  # 캐시를 지우고 다시 판정
-  python evaluate.py --example  # 실명 파일이 있어도 가상 이름 예시로
+  python evaluate.py --example  # 다른 이름 세트(samples.example.json)로
 
-실명 파일(data/samples.json)이 있으면 그걸 쓰고 결과는 results/real/ 에 둔다 (git 제외).
+참석자 명단 예시(data/samples.json)가 있으면 그걸 쓰고 결과는 results/attendees/ 에 둔다.
 """
 import argparse
 import itertools
@@ -28,7 +28,7 @@ from writer import write_award  # noqa: E402
 def paths(example):
     real = os.path.join(ROOT, "data", "samples.json")
     if os.path.exists(real) and not example:
-        return real, os.path.join(ROOT, "results", "real")
+        return real, os.path.join(ROOT, "results", "attendees")
     return os.path.join(ROOT, "data", "samples.example.json"), os.path.join(ROOT, "results")
 
 

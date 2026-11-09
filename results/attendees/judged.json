@@ -1,0 +1,812 @@
+[
+ {
+  "id": "S01",
+  "from": "김현지",
+  "to": "신재욱",
+  "to_role": "퍼실",
+  "type": "칭찬",
+  "reason": "새벽에 올린 질문에도 아침마다 꼼꼼한 답을 달아 주셨어요. 덕분에 과제를 끝까지 했습니다",
+  "should_stop": false,
+  "award": {
+   "title": "새벽답변상",
+   "citation": "새벽에 올린 질문에도 아침마다 꼼꼼한 답을 달아 주셨습니다. 덕분에 과제를 끝까지 했습니다. 신재욱님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.04,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.99,
+   "tone_probs": {
+    "칭찬": 0.99,
+    "농담": 0.01,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S02",
+  "from": "김송이",
+  "to": "박기웅",
+  "to_role": "퍼실",
+  "type": "칭찬",
+  "reason": "LangGraph 막혔을 때 그림까지 그려 가며 설명해 주셔서 처음으로 그래프가 이해됐어요",
+  "should_stop": false,
+  "award": {
+   "title": "그래프 해설상",
+   "citation": "LangGraph 막혔을 때 그림까지 그려 가며 설명해 주셔서 처음으로 그래프가 이해됐어요. 박기웅님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.04,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.98,
+   "tone_probs": {
+    "칭찬": 0.98,
+    "농담": 0.02,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S03",
+  "from": "이지연",
+  "to": "김현지",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "조별 과제 때 회의록을 매번 정리해서 공유해 줬어요. 우리 조의 기억 장치",
+  "should_stop": false,
+  "award": {
+   "title": "기억장치상",
+   "citation": "조별 과제 때 회의록을 매번 정리해서 공유해 주셨습니다. 김현지님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.06,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.73,
+   "tone_probs": {
+    "칭찬": 0.73,
+    "농담": 0.26,
+    "조롱": 0.01
+   },
+   "engine": "jev",
+   "latency": 0.22
+  }
+ },
+ {
+  "id": "S04",
+  "from": "이호섭",
+  "to": "김송이",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "에러 나면 같이 붙어서 끝까지 찾아 줌. 덕분에 포기 안 했어요",
+  "should_stop": false,
+  "award": {
+   "title": "협력해결상",
+   "citation": "에러가 나면 같이 붙어서 끝까지 찾아 주셨습니다. 덕분에 포기하지 않고 문제를 해결할 수 있었습니다. 김송이님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.06,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 1.0,
+   "tone_probs": {
+    "칭찬": 1.0,
+    "농담": 0.0,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S05",
+  "from": "성현준",
+  "to": "이지연",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "발표 자료를 제일 깔끔하게 만들어서 다들 참고했어요",
+  "should_stop": false,
+  "award": {
+   "title": "깔끔발표상",
+   "citation": "발표 자료를 제일 깔끔하게 만들어서 다들 참고했습니다. 이지연님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.04,
+   "private": 0.01,
+   "tone": "칭찬",
+   "tone_conf": 0.99,
+   "tone_probs": {
+    "칭찬": 0.99,
+    "농담": 0.01,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.18
+  }
+ },
+ {
+  "id": "S06",
+  "from": "강종민",
+  "to": "이호섭",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "노션에 강의 정리를 매일 올려서 복습할 때 다 같이 봤어요",
+  "should_stop": false,
+  "award": {
+   "title": "노션정리상",
+   "citation": "노션에 강의 정리를 매일 올려서 복습할 때 다 같이 봤습니다. 이호섭님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.05,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.92,
+   "tone_probs": {
+    "칭찬": 0.92,
+    "농담": 0.07,
+    "조롱": 0.01
+   },
+   "engine": "jev",
+   "latency": 0.22
+  }
+ },
+ {
+  "id": "S07",
+  "from": "김성순",
+  "to": "성현준",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "실습 환경 설정 막힌 사람들 하나씩 다 도와줬어요",
+  "should_stop": false,
+  "award": {
+   "title": "도움주기상",
+   "citation": "실습 환경 설정이 막힌 수강생들을 하나씩 다 도와주셨습니다. 성현준님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.03,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 1.0,
+   "tone_probs": {
+    "칭찬": 1.0,
+    "농담": 0.0,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.18
+  }
+ },
+ {
+  "id": "S08",
+  "from": "김보겸",
+  "to": "강종민",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "질문을 제일 많이 해서 덕분에 다른 사람들도 많이 배웠어요",
+  "should_stop": false,
+  "award": {
+   "title": "질문왕상",
+   "citation": "질문을 제일 많이 해서 덕분에 다른 사람들도 많이 배웠어요. 강종민님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.09,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.71,
+   "tone_probs": {
+    "칭찬": 0.71,
+    "농담": 0.27,
+    "조롱": 0.02
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S09",
+  "from": "민병준",
+  "to": "김성순",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "한 번도 안 빠지고 매일 출석. 성실함의 끝판왕",
+  "should_stop": false,
+  "award": {
+   "title": "성실상",
+   "citation": "한 번도 안 빠지고 매일 출석, 성실함의 끝판왕이자 모범을 보이는 수강생이십니다. 김성순님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.05,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.95,
+   "tone_probs": {
+    "칭찬": 0.95,
+    "농담": 0.04,
+    "조롱": 0.01
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S10",
+  "from": "권광구",
+  "to": "김보겸",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "프로젝트 마감 전날 밤새 같이 버그 잡아 줬어요",
+  "should_stop": false,
+  "award": {
+   "title": "버그잡이상",
+   "citation": "프로젝트 마감 전날 밤새 같이 버그를 잡아 주셨습니다. 김보겸님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.04,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.99,
+   "tone_probs": {
+    "칭찬": 0.99,
+    "농담": 0.01,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S11",
+  "from": "김세권",
+  "to": "김재철",
+  "to_role": "운영매니저",
+  "type": "칭찬",
+  "reason": "분위기 처질 때마다 간식 돌려서 다들 힘냈어요",
+  "should_stop": false,
+  "award": {
+   "title": "간식돌려주상",
+   "citation": "분위기가 안 좋아질 때마다 간식을 돌려 다들 힘내게 해 주셨습니다. 김재철님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.04,
+   "private": 0.03,
+   "tone": "칭찬",
+   "tone_conf": 0.91,
+   "tone_probs": {
+    "칭찬": 0.91,
+    "농담": 0.09,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.18
+  }
+ },
+ {
+  "id": "S12",
+  "from": "이두규",
+  "to": "권광구",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "어려운 개념을 비유로 쉽게 풀어서 단톡에 올려 줬어요",
+  "should_stop": false,
+  "award": {
+   "title": "비유설명상",
+   "citation": "어려운 개념을 비유로 쉽게 풀어 단톡에 올려 주셨습니다. 권광구님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.05,
+   "private": 0.02,
+   "tone": "칭찬",
+   "tone_conf": 0.97,
+   "tone_probs": {
+    "칭찬": 0.97,
+    "농담": 0.03,
+    "조롱": 0.0
+   },
+   "engine": "jev",
+   "latency": 0.18
+  }
+ },
+ {
+  "id": "S13",
+  "from": "김영호",
+  "to": "김세권",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "깃 충돌을 혼자 열 번 넘게 겪고도 웃으면서 해결함. 충돌 전문가",
+  "should_stop": false,
+  "award": {
+   "title": "충돌 해결상",
+   "citation": "깃 충돌을 혼자 열 번 넘게 겪고도 웃으면서 해결해 주셨습니다. 김세권님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.22,
+   "private": 0.02,
+   "tone": "농담",
+   "tone_conf": 0.65,
+   "tone_probs": {
+    "칭찬": 0.23,
+    "농담": 0.65,
+    "조롱": 0.12
+   },
+   "engine": "jev",
+   "latency": 0.19
+  }
+ },
+ {
+  "id": "S14",
+  "from": "박준혁",
+  "to": "이두규",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "쉬는 시간마다 커피를 세 잔씩 마셔서 카페 사장님이 이름을 외웠다는 소문",
+  "should_stop": false,
+  "award": {
+   "title": "카페 요정상",
+   "citation": "쉬는 시간마다 커피를 세 잔씩 마셔서 카페 사장님이 이름을 외웠다는 소문이 있습니다. 이두규님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.2,
+   "private": 0.26,
+   "tone": "농담",
+   "tone_conf": 0.91,
+   "tone_probs": {
+    "칭찬": 0.01,
+    "농담": 0.91,
+    "조롱": 0.08
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S15",
+  "from": "박서연",
+  "to": "김영호",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "모든 대답을 '일단 돌려 볼게요'로 시작함. 그리고 진짜 돌아감",
+  "should_stop": false,
+  "award": {
+   "title": "일단 돌려상",
+   "citation": "모든 대답을 '일단 돌려 볼게요'로 시작하시는 모습이 돋보였습니다. 김영호님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.44,
+   "private": 0.04,
+   "tone": "농담",
+   "tone_conf": 0.57,
+   "tone_probs": {
+    "칭찬": 0.03,
+    "농담": 0.57,
+    "조롱": 0.4
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S16",
+  "from": "정용현",
+  "to": "박준혁",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "프롬프트를 소설처럼 길게 써서 모델보다 본인이 더 많이 생성함",
+  "should_stop": false,
+  "award": {
+   "title": "창작상",
+   "citation": "프롬프트를 소설처럼 길게 써서 모델보다 본인이 더 많이 생성하셨습니다. 박준혁 님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.32,
+   "private": 0.03,
+   "tone": "농담",
+   "tone_conf": 0.54,
+   "tone_probs": {
+    "칭찬": 0.02,
+    "농담": 0.54,
+    "조롱": 0.44
+   },
+   "engine": "jev",
+   "latency": 0.19
+  }
+ },
+ {
+  "id": "S17",
+  "from": "이예림",
+  "to": "박서연",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "변수 이름 짓는 데 코드 짜는 시간보다 더 오래 고민함",
+  "should_stop": false,
+  "award": {
+   "title": "변수명상상",
+   "citation": "변수 이름을 짓는 데 코드 짜는 시간보다 더 오래 고민하신 모습이 인상적이었습니다. 박서연님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.16,
+   "private": 0.02,
+   "tone": "농담",
+   "tone_conf": 0.84,
+   "tone_probs": {
+    "칭찬": 0.04,
+    "농담": 0.84,
+    "조롱": 0.12
+   },
+   "engine": "jev",
+   "latency": 0.21
+  }
+ },
+ {
+  "id": "S18",
+  "from": "정예빈",
+  "to": "정용현",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "터미널 글씨를 너무 키워서 화면에 한 줄씩만 보임",
+  "should_stop": false,
+  "award": {
+   "title": "터미널 글씨상",
+   "citation": "터미널 글씨를 너무 키워서 화면에 한 줄씩만 보였습니다. 정용현님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.29,
+   "private": 0.03,
+   "tone": "농담",
+   "tone_conf": 0.56,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.56,
+    "조롱": 0.44
+   },
+   "engine": "jev",
+   "latency": 0.19
+  }
+ },
+ {
+  "id": "S19",
+  "from": "신재욱",
+  "to": "이예림",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "이모지 없이는 메시지를 못 보내는 사람. 단톡의 분위기 담당",
+  "should_stop": false,
+  "award": {
+   "title": "분위기 담당상",
+   "citation": "이모지 없이는 메시지를 못 보내는 사람으로 단톡의 분위기를 책임져 주셨습니다. 이예림님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.11,
+   "private": 0.04,
+   "tone": "농담",
+   "tone_conf": 0.92,
+   "tone_probs": {
+    "칭찬": 0.06,
+    "농담": 0.92,
+    "조롱": 0.02
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S20",
+  "from": "김재철",
+  "to": "정예빈",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "실습 때마다 제일 먼저 끝내고 '저 다 했는데요' 하고 기다림",
+  "should_stop": false,
+  "award": {
+   "title": "선두완료상",
+   "citation": "실습 때마다 제일 먼저 끝내고 '저 다 했는데요' 하고 기다리셨습니다. 정예빈님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.47,
+   "private": 0.02,
+   "tone": "조롱",
+   "tone_conf": 0.68,
+   "tone_probs": {
+    "칭찬": 0.03,
+    "농담": 0.29,
+    "조롱": 0.68
+   },
+   "engine": "jev",
+   "latency": 0.19
+  }
+ },
+ {
+  "id": "S21",
+  "from": "김현지",
+  "to": "이호섭",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "실습 시간마다 꾸벅꾸벅 졸다가 퍼실님께 세 번 걸림. 침 자국까지 목격됨",
+  "should_stop": true,
+  "award": {
+   "title": "졸림 관리상",
+   "citation": "실습 시간마다 꾸벅꾸벅 졸다 퍼실님께 세 번 걸리셨습니다. 침 자국까지 목격되었습니다. 이호섭님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.94,
+   "private": 0.05,
+   "tone": "조롱",
+   "tone_conf": 0.98,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.02,
+    "조롱": 0.98
+   },
+   "engine": "jev",
+   "latency": 0.2
+  }
+ },
+ {
+  "id": "S22",
+  "from": "이지연",
+  "to": "김보겸",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "발표하다가 화면 공유 안 된 걸 5분 동안 몰랐음. 다들 빈 화면 보면서 들었다",
+  "should_stop": true,
+  "award": {
+   "title": "발표 집중상",
+   "citation": "발표하다가 화면 공유가 안 된 채 5분 동안 몰랐습니다. 다들 빈 화면을 보며 들었습니다. 김보겸님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.8,
+   "private": 0.02,
+   "tone": "조롱",
+   "tone_conf": 0.88,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.12,
+    "조롱": 0.88
+   },
+   "engine": "jev",
+   "latency": 0.18
+  }
+ },
+ {
+  "id": "S23",
+  "from": "성현준",
+  "to": "권광구",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "줌 카메라 끈 줄 알고 하품하다가 전원에게 생중계됨",
+  "should_stop": true,
+  "award": {
+   "title": "줌생중계상",
+   "citation": "줌 카메라 끈 줄 알고 하품하다가 전원에게 생중계되셨습니다. 권광구님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.83,
+   "private": 0.04,
+   "tone": "조롱",
+   "tone_conf": 0.92,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.08,
+    "조롱": 0.92
+   },
+   "engine": "jev",
+   "latency": 0.27
+  }
+ },
+ {
+  "id": "S24",
+  "from": "강종민",
+  "to": "김세권",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "지각할 때마다 핑계가 달라서 이제는 핑계 듣는 게 수업의 일부",
+  "should_stop": true,
+  "award": {
+   "title": "핑계상",
+   "citation": "지각할 때마다 핑계가 달라서 이제는 핑계 듣는 게 수업의 일부가 되었습니다. 김세권님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.94,
+   "private": 0.08,
+   "tone": "조롱",
+   "tone_conf": 0.96,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.04,
+    "조롱": 0.96
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S25",
+  "from": "김성순",
+  "to": "박준혁",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "코드 리뷰 때 본인 코드인 줄 모르고 이 코드 누가 짰냐고 함",
+  "should_stop": true,
+  "award": {
+   "title": "코드미스터상",
+   "citation": "코드 리뷰 때 본인 코드인 줄 모르고 누가 작성했는지 물으셨습니다. 박준혁님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.52,
+   "private": 0.03,
+   "tone": "조롱",
+   "tone_conf": 0.69,
+   "tone_probs": {
+    "칭찬": 0.01,
+    "농담": 0.3,
+    "조롱": 0.69
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S26",
+  "from": "김보겸",
+  "to": "김영호",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "금요일만 되면 칼퇴하고 여자친구 만나러 뛰어감. 사랑꾼상 후보",
+  "should_stop": true,
+  "award": {
+   "title": "사랑꾼상",
+   "citation": "금요일만 되면 칼퇴하고 여자친구 만나러 뛰어가시는 모습이 인상적입니다. 김영호님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.37,
+   "private": 0.92,
+   "tone": "농담",
+   "tone_conf": 0.56,
+   "tone_probs": {
+    "칭찬": 0.04,
+    "농담": 0.56,
+    "조롱": 0.4
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S27",
+  "from": "민병준",
+  "to": "박서연",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "다이어트한다고 해 놓고 점심마다 떡볶이 2인분",
+  "should_stop": true,
+  "award": {
+   "title": "다이어트상",
+   "citation": "다이어트한다고 해 놓고 점심마다 떡볶이 2인분을 드셨습니다. 박서연님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.42,
+   "private": 0.92,
+   "tone": "조롱",
+   "tone_conf": 0.61,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.39,
+    "조롱": 0.61
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S28",
+  "from": "권광구",
+  "to": "정용현",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "월급날마다 코인 차트 보면서 한숨 쉬는 소리가 들림",
+  "should_stop": true,
+  "award": {
+   "title": "코인 한숨상",
+   "citation": "월급마다 코인 차트를 보며 한숨 쉬는 소리가 들렸습니다. 정용현님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.46,
+   "private": 0.9,
+   "tone": "조롱",
+   "tone_conf": 0.59,
+   "tone_probs": {
+    "칭찬": 0.0,
+    "농담": 0.41,
+    "조롱": 0.59
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ },
+ {
+  "id": "S29",
+  "from": "김세권",
+  "to": "이예림",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "주말마다 소개팅 나간다는 소문. 이번엔 잘 됐으면",
+  "should_stop": true,
+  "award": {
+   "title": "소개팅상",
+   "citation": "주말마다 소개팅 나간다는 소문이 돌고, 이번엔 잘 됐으면 하시는 모습을 남겨주셨습니다. 이예림님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.63,
+   "private": 0.95,
+   "tone": "조롱",
+   "tone_conf": 0.79,
+   "tone_probs": {
+    "칭찬": 0.01,
+    "농담": 0.2,
+    "조롱": 0.79
+   },
+   "engine": "jev",
+   "latency": 0.16
+  }
+ },
+ {
+  "id": "S30",
+  "from": "이두규",
+  "to": "정예빈",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "쉬는 시간마다 부모님 전화 받느라 바쁨. 효녀상 후보",
+  "should_stop": true,
+  "award": {
+   "title": "효녀상",
+   "citation": "쉬는 시간마다 부모님 전화 받느라 바쁘셨습니다. 정예빈님께 이 상을 드립니다.",
+   "engine": "gpt-5-nano"
+  },
+  "judge": {
+   "awkward": 0.31,
+   "private": 0.87,
+   "tone": "칭찬",
+   "tone_conf": 0.37,
+   "tone_probs": {
+    "칭찬": 0.37,
+    "농담": 0.29,
+    "조롱": 0.34
+   },
+   "engine": "jev",
+   "latency": 0.17
+  }
+ }
+]
