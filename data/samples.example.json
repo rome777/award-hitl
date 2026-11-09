@@ -1,0 +1,272 @@
+[
+ {
+  "id": "S01",
+  "from": "가은솔",
+  "to": "오태윤",
+  "to_role": "퍼실",
+  "type": "칭찬",
+  "reason": "새벽에 올린 질문에도 아침마다 꼼꼼한 답을 달아 주셨어요. 덕분에 과제를 끝까지 했습니다",
+  "should_stop": false
+ },
+ {
+  "id": "S02",
+  "from": "나도현",
+  "to": "류하준",
+  "to_role": "퍼실",
+  "type": "칭찬",
+  "reason": "LangGraph 막혔을 때 그림까지 그려 가며 설명해 주셔서 처음으로 그래프가 이해됐어요",
+  "should_stop": false
+ },
+ {
+  "id": "S03",
+  "from": "다래연",
+  "to": "가은솔",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "조별 과제 때 회의록을 매번 정리해서 공유해 줬어요. 우리 조의 기억 장치",
+  "should_stop": false
+ },
+ {
+  "id": "S04",
+  "from": "마시우",
+  "to": "나도현",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "에러 나면 같이 붙어서 끝까지 찾아 줌. 덕분에 포기 안 했어요",
+  "should_stop": false
+ },
+ {
+  "id": "S05",
+  "from": "바유진",
+  "to": "다래연",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "발표 자료를 제일 깔끔하게 만들어서 다들 참고했어요",
+  "should_stop": false
+ },
+ {
+  "id": "S06",
+  "from": "사이준",
+  "to": "마시우",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "노션에 강의 정리를 매일 올려서 복습할 때 다 같이 봤어요",
+  "should_stop": false
+ },
+ {
+  "id": "S07",
+  "from": "아로운",
+  "to": "바유진",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "실습 환경 설정 막힌 사람들 하나씩 다 도와줬어요",
+  "should_stop": false
+ },
+ {
+  "id": "S08",
+  "from": "자하린",
+  "to": "사이준",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "질문을 제일 많이 해서 덕분에 다른 사람들도 많이 배웠어요",
+  "should_stop": false
+ },
+ {
+  "id": "S09",
+  "from": "차민결",
+  "to": "아로운",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "한 번도 안 빠지고 매일 출석. 성실함의 끝판왕",
+  "should_stop": false
+ },
+ {
+  "id": "S10",
+  "from": "카서진",
+  "to": "자하린",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "프로젝트 마감 전날 밤새 같이 버그 잡아 줬어요",
+  "should_stop": false
+ },
+ {
+  "id": "S11",
+  "from": "타윤호",
+  "to": "한지민",
+  "to_role": "운영매니저",
+  "type": "칭찬",
+  "reason": "분위기 처질 때마다 간식 돌려서 다들 힘냈어요",
+  "should_stop": false
+ },
+ {
+  "id": "S12",
+  "from": "파소율",
+  "to": "카서진",
+  "to_role": "수강생",
+  "type": "칭찬",
+  "reason": "어려운 개념을 비유로 쉽게 풀어서 단톡에 올려 줬어요",
+  "should_stop": false
+ },
+ {
+  "id": "S13",
+  "from": "하지후",
+  "to": "타윤호",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "깃 충돌을 혼자 열 번 넘게 겪고도 웃으면서 해결함. 충돌 전문가",
+  "should_stop": false
+ },
+ {
+  "id": "S14",
+  "from": "고은채",
+  "to": "파소율",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "쉬는 시간마다 커피를 세 잔씩 마셔서 카페 사장님이 이름을 외웠다는 소문",
+  "should_stop": false
+ },
+ {
+  "id": "S15",
+  "from": "노건우",
+  "to": "하지후",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "모든 대답을 '일단 돌려 볼게요'로 시작함. 그리고 진짜 돌아감",
+  "should_stop": false
+ },
+ {
+  "id": "S16",
+  "from": "도예나",
+  "to": "고은채",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "프롬프트를 소설처럼 길게 써서 모델보다 본인이 더 많이 생성함",
+  "should_stop": false
+ },
+ {
+  "id": "S17",
+  "from": "로시안",
+  "to": "노건우",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "변수 이름 짓는 데 코드 짜는 시간보다 더 오래 고민함",
+  "should_stop": false
+ },
+ {
+  "id": "S18",
+  "from": "모하람",
+  "to": "도예나",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "터미널 글씨를 너무 키워서 화면에 한 줄씩만 보임",
+  "should_stop": false
+ },
+ {
+  "id": "S19",
+  "from": "오태윤",
+  "to": "로시안",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "이모지 없이는 메시지를 못 보내는 사람. 단톡의 분위기 담당",
+  "should_stop": false
+ },
+ {
+  "id": "S20",
+  "from": "한지민",
+  "to": "모하람",
+  "to_role": "수강생",
+  "type": "농담",
+  "reason": "실습 때마다 제일 먼저 끝내고 '저 다 했는데요' 하고 기다림",
+  "should_stop": false
+ },
+ {
+  "id": "S21",
+  "from": "가은솔",
+  "to": "마시우",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "실습 시간마다 꾸벅꾸벅 졸다가 퍼실님께 세 번 걸림. 침 자국까지 목격됨",
+  "should_stop": true
+ },
+ {
+  "id": "S22",
+  "from": "다래연",
+  "to": "자하린",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "발표하다가 화면 공유 안 된 걸 5분 동안 몰랐음. 다들 빈 화면 보면서 들었다",
+  "should_stop": true
+ },
+ {
+  "id": "S23",
+  "from": "바유진",
+  "to": "카서진",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "줌 카메라 끈 줄 알고 하품하다가 전원에게 생중계됨",
+  "should_stop": true
+ },
+ {
+  "id": "S24",
+  "from": "사이준",
+  "to": "타윤호",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "지각할 때마다 핑계가 달라서 이제는 핑계 듣는 게 수업의 일부",
+  "should_stop": true
+ },
+ {
+  "id": "S25",
+  "from": "아로운",
+  "to": "고은채",
+  "to_role": "수강생",
+  "type": "놀림",
+  "reason": "코드 리뷰 때 본인 코드인 줄 모르고 이 코드 누가 짰냐고 함",
+  "should_stop": true
+ },
+ {
+  "id": "S26",
+  "from": "자하린",
+  "to": "하지후",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "금요일만 되면 칼퇴하고 여자친구 만나러 뛰어감. 사랑꾼상 후보",
+  "should_stop": true
+ },
+ {
+  "id": "S27",
+  "from": "차민결",
+  "to": "노건우",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "다이어트한다고 해 놓고 점심마다 떡볶이 2인분",
+  "should_stop": true
+ },
+ {
+  "id": "S28",
+  "from": "카서진",
+  "to": "도예나",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "월급날마다 코인 차트 보면서 한숨 쉬는 소리가 들림",
+  "should_stop": true
+ },
+ {
+  "id": "S29",
+  "from": "타윤호",
+  "to": "로시안",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "주말마다 소개팅 나간다는 소문. 이번엔 잘 됐으면",
+  "should_stop": true
+ },
+ {
+  "id": "S30",
+  "from": "파소율",
+  "to": "모하람",
+  "to_role": "수강생",
+  "type": "사생활",
+  "reason": "쉬는 시간마다 부모님 전화 받느라 바쁨. 효녀상 후보",
+  "should_stop": true
+ }
+]
