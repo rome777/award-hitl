@@ -16,18 +16,38 @@
 추천 한 건이 thread_id 하나입니다.
 
 ```mermaid
-flowchart TD
+flowchart LR
     S([추천 입력]) --> W["write<br/>gpt-5-nano<br/>상 이름 · 시상 문구"]
     W --> J["judge<br/>Jev<br/>창피·불쾌 · 사생활 · 성격"]
     J --> C{기준에 걸리나?<br/>또는 다시 쓴 문구인가?}
     C -- 아니오 --> P["publish<br/>시상식 화면 공개"]
-    C -- 예 --> R[["review<br/>interrupt: 멈추고 담당자 답 대기<br/>(체크포인터에 저장)"]]
+    C -- 예 --> R[["review<br/>interrupt<br/>멈추고 담당자 답 대기<br/>(체크포인터에 저장)"]]
     R -- 승인 --> P
     R -- 수정 후 승인 --> P
-    R -- 다시 쓰기 + 지시<br/>(최대 2회) --> W
+    R -. 다시 쓰기 + 지시<br/>(최대 2회) .-> W
     R -- 빼기 + 사유 --> D["drop<br/>공개하지 않음"]
     P --> E([끝])
     D --> E
+
+    classDef io fill:#e5e7eb,stroke:#6b7280,color:#111827
+    classDef ai fill:#dbeafe,stroke:#2563eb,color:#1e3a8a
+    classDef check fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+    classDef human fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef ok fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef out fill:#fee2e2,stroke:#dc2626,color:#7f1d1d
+    class S,E io
+    class W,J ai
+    class C check
+    class R human
+    class P ok
+    class D out
+
+    linkStyle 0,1,2 stroke:#2563eb,stroke-width:2px
+    linkStyle 3,5,6 stroke:#16a34a,stroke-width:2px
+    linkStyle 4 stroke:#d97706,stroke-width:2px
+    linkStyle 7 stroke:#2563eb,stroke-width:2px
+    linkStyle 8 stroke:#dc2626,stroke-width:2px
+    linkStyle 9,10 stroke:#6b7280,stroke-width:2px
 ```
 
 **State**
